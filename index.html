@@ -77,8 +77,8 @@
         max-width: 40rem;
       }
 
-      #shoppingCart .card {
-        border: 5px solid green;
+      .inCart {
+        border: 3px solid red;
       }
 
       footer {
@@ -105,8 +105,26 @@
         }
       }
     </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
   </head>
   <body>
+    <header>
+      <div class="dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          data-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="bi bi-cart3"></i>
+        </button>
+
+        <ul class="dropdown-menu" id="shoppingCart"></ul>
+      </div>
+    </header>
     <main role="main">
       <section class="jumbotron text-center">
         <div class="container">
@@ -115,15 +133,11 @@
             This store has all the books your heart wants. Stay as long as you
             want and if you want to buy a book, put it in the cart!
           </p>
-          <p>
+          <!-- <p>
             <a href="#" class="btn btn-primary my-2">Load Images</a>
             <a href="#" class="btn btn-secondary my-2">Load Secondary Images</a>
-          </p>
+          </p> -->
         </div>
-      </section>
-      <section class="container-fluid cart py-5 bg-warning">
-        <h3>Your shopping Cart:</h3>
-        <div class="row" id="shoppingCart"></div>
       </section>
 
       <div class="album py-5 bg-light">
